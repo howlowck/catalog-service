@@ -1,0 +1,11 @@
+{
+  "name": "catalog-service",
+  "version": "1.0.0",
+  "description": "A catalog service that finds an item or returns options to find an item",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hao Luo <howlowck@gmail.com>",
+  "license": "MIT"
+}
