@@ -25,9 +25,20 @@ export interface LabelDetailObj {
   [labelText: string]: LabelResult[]
 }
 
+export enum SearchResultType {
+  directMatchSingleItem = 'directMatchSingleItem',
+  inferredSingleItem = 'inferredSingleItem',
+  needDisambiguation = 'needDisambiguation'
+}
+
+export interface SearchResult {
+  itemFound: boolean,
+  type: SearchResultType
+}
+
 export interface SearchResponse {
   input: string[],
   disambiguation: DisambiguationResult[],
   labelDetail: LabelDetailObj,
-  matchingItems: []
+  searchResult: SearchResult,
 }

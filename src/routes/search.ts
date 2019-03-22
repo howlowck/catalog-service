@@ -1,7 +1,9 @@
 import { Request, Response } from 'express'
 import { classifications, concepts, items } from '../core/search'
-import { Query, LabelSearchResultObj, SearchResponse, LabelDetailObj } from '../types/server'
+import data from '../core/data'
+import { Query, SearchResponse, LabelDetailObj, SearchResultType, SearchResult } from '../types/server'
 import { SchemaType } from '../types/generic'
+import { CatalogSchema } from 'common-catalog-schema'
 
 const transformToLabelResult = (type: SchemaType) => (result: {item: string, score: number}) => {
   return {
@@ -19,23 +21,24 @@ const getLabelResults = (label: string) => {
   return allResults.sort((a, b) => b.score - a.score)
 }
 
-const getLabelResultObject = (labels: string[]): LabelDetailObj => {
-  const result: LabelSearchResultObj = {}
-  labels.forEach((label: string) => {
-    result[label] = getLabelResults(label)
-  })
-  return result
+const getSearchResult = (data: CatalogSchema, labels: string[], labelSearchDetail: LabelDetailObj): SearchResult => {
+  // const exactItemFound = labelSearch
+  return {
+    itemFound: false,
+    type: SearchResultType.directMatchSingleItem
+  }
 }
 
 export default (req: Request, res: Response) => {
   const { labels: rawLabels } = req.query as Query
 
   const labels: string[] = rawLabels.split(',')
+  const labelSearchDetail: LabelDetailObj = labels.reduce((prev, label) => ({ ...prev, [label]: getLabelResults(label) }), {})
 
   res.json({
     input: labels,
-    labelDetail: getLabelResultObject(labels),
+    labelDetail: labelSearchDetail,
     disambiguation: [],
-    matchingItems: []
+    searchResult: getSearchResult(data, labels, labelSearchDetail)
   } as SearchResponse)
 }

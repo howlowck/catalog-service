@@ -47,8 +47,8 @@ export const itemSearch = new Fuse(data.items, {
   includeScore: true,
   findAllMatches: true,
   keys: [
-    { name: 'displayName', weight: 0.7 },
-    { name: 'commonNames', weight: 0.4 }
+    { name: 'displayName', weight: 1 },
+    { name: 'commonNames', weight: 0.7 }
   ]
 })
 
