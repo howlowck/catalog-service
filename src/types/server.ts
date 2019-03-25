@@ -21,8 +21,9 @@ export interface LabelResult {
   score: number
 }
 
-export interface LabelDetailObj {
-  [labelText: string]: LabelResult[]
+export interface LabelSearchResult {
+  label: string,
+  results: LabelResult[]
 }
 
 export enum SearchResultType {
@@ -38,7 +39,18 @@ export interface SearchResult {
 
 export interface SearchResponse {
   input: string[],
-  disambiguation: DisambiguationResult[],
-  labelDetail: LabelDetailObj,
-  searchResult: SearchResult,
+  // disambiguation: DisambiguationResult[],
+  labelSearchResults: LabelSearchResult[],
+  // searchResult: SearchResult,
+  itemClassificationHeuristics: {
+    label: string,
+    classifications: {
+      classificationId: string,
+      result: {
+        conceptId: string,
+        key: string,
+        itemsFound: string[]
+      }[]
+    }[]
+  }[]
 }

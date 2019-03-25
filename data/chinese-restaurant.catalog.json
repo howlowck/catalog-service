@@ -183,12 +183,14 @@
       "commonNames": [],
       "classification": {
         "classificationId": "street-food"
-      }
+      },
+      "disambiguationAttributes": []
     },
     {
       "id": "edamame",
       "displayName": "Edamame",
       "commonNames": ["steamed peas"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "street-food"
       }
@@ -207,6 +209,7 @@
           }
         }
       ],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "street-food"
       }
@@ -215,6 +218,7 @@
       "id": "fried-green-beans",
       "displayName": "Fried Green Beans",
       "commonNames": ["Crispy Green Beans"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "street-food"
       }
@@ -223,6 +227,7 @@
       "id": "bbq-ribs",
       "displayName": "BBQ ribs",
       "commonNames": ["Barbecue Spare Ribs", "Ribs"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "street-food"
       }
@@ -231,6 +236,7 @@
       "id": "spicy-shrimp",
       "displayName": "Spicy Shrimp",
       "commonNames": ["shrimp bites"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "street-food"
       }
@@ -267,6 +273,7 @@
       "id": "crab-rangoon",
       "displayName": "Crab Rangoon",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "dim-sum"
       }
@@ -275,6 +282,7 @@
       "id": "spring-rolls",
       "displayName": "Spring Rolls",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "dim-sum"
       }
@@ -311,6 +319,7 @@
       "id": "charred-brussels-sprout",
       "displayName": "Charred Brussels Sprout",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "side-dish"
       }
@@ -319,6 +328,7 @@
       "id": "sichuan-asparagus",
       "displayName": "Sichuan Asparagus",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "side-dish"
       }
@@ -327,6 +337,7 @@
       "id": "fried-rice",
       "displayName": "Fried Rice",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "side-dish"
       }
@@ -335,6 +346,7 @@
       "id": "spinach-with-garlic",
       "displayName": "Spinach with Garlic",
       "commonNames": ["steamed spinach"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "side-dish"
       }
@@ -343,6 +355,7 @@
       "id": "chili-garlic-green-beans",
       "displayName": "Chili Garlic Green Beans",
       "commonNames": ["garlic green beans"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "side-dish"
       }
@@ -351,6 +364,7 @@
       "id": "long-life-noodles",
       "displayName": "Long Life Noodles",
       "commonNames": ["noodles as a side"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "side-dish"
       }
@@ -359,6 +373,7 @@
       "id": "california-roll",
       "displayName": "California Roll",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sushi"
       }
@@ -367,6 +382,7 @@
       "id": "spicy-tuna-roll",
       "displayName": "Spicy Tuna Roll",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sushi"
       }
@@ -375,6 +391,7 @@
       "id": "shrimp-tempura-roll",
       "displayName": "Shrimp Tempura Roll",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sushi"
       }
@@ -383,6 +400,7 @@
       "id": "caesar-salad",
       "displayName": "Caesar Salad",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "salad"
       },
@@ -407,6 +425,7 @@
       "id": "mandarin-salad",
       "displayName": "Mandarin Salad",
       "commonNames": ["Mandarin Crunch Salad"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "salad"
       },
@@ -431,6 +450,7 @@
       "id": "noodle-salad",
       "displayName": "Noodle Salad",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "salad"
       },
@@ -455,6 +475,7 @@
       "id": "egg-drop-soup",
       "displayName": "Egg Drop Soup",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "soup"
       }
@@ -463,6 +484,7 @@
       "id": "hot-sour-soup",
       "displayName": "Hot Sour Soup",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "soup"
       }
@@ -471,6 +493,7 @@
       "id": "wonton-soup",
       "displayName": "Wonton Soup",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "soup"
       }
@@ -479,6 +502,7 @@
       "id": "chicken-noodle-soup",
       "displayName": "Chicken Noodle Soup",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "soup"
       }
@@ -487,6 +511,7 @@
       "id": "spicy-chicken",
       "displayName": "Spicy Chicken",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "chicken"
       }
@@ -495,6 +520,7 @@
       "id": "black-pepper-chicken",
       "displayName": "Black Pepper Chicken",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "chicken"
       }
@@ -503,6 +529,7 @@
       "id": "chicken-with-broccoli",
       "displayName": "Chicken With Broccoli",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "chicken"
       }
@@ -511,6 +538,7 @@
       "id": "sesame-chicken",
       "displayName": "Sesame Chicken",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "chicken"
       }
@@ -519,6 +547,7 @@
       "id": "sweet-sour-chicken",
       "displayName": "Sweet and Sour Chicken",
       "commonNames": ["sweet sour chicken"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "chicken"
       }
@@ -527,6 +556,7 @@
       "id": "thai-curry-with-chicken",
       "displayName": "Thai Curry with Chicken",
       "commonNames": ["curry with chicken"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "chicken"
       }
@@ -534,6 +564,7 @@
     {
       "id": "orange-chicken",
       "displayName": "Orange Chicken",
+      "disambiguationAttributes": [],
       "commonNames": [],
       "classification": {
         "classificationId": "chicken"
@@ -554,6 +585,7 @@
       "id": "mongolian-beef",
       "displayName": "Mongolian Beef",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "beef"
       }
@@ -562,6 +594,7 @@
       "id": "pepper-steak",
       "displayName": "Pepper Steak",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "beef"
       }
@@ -570,6 +603,7 @@
       "id": "beef-with-broccoli",
       "displayName": "Beef with Broccoli",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "beef"
       }
@@ -578,6 +612,7 @@
       "id": "surf-and-turf",
       "displayName": "Surf and Turf",
       "commonNames": ["shrimp and steak"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "seafood"
       }
@@ -586,6 +621,7 @@
       "id": "honey-shrimp",
       "displayName": "Honey Shrimp",
       "commonNames": ["crispy shrimp"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "seafood"
       }
@@ -594,6 +630,7 @@
       "id": "chilean-sea-bass",
       "displayName": "Chilean Sea Bass",
       "commonNames": ["sea bass"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "seafood"
       }
@@ -602,6 +639,7 @@
       "id": "kung-pao-shrimp",
       "displayName": "Kung Pao Shrimp",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "seafood"
       }
@@ -610,6 +648,7 @@
       "id": "shrimp-with-lobster-sauce",
       "displayName": "Shrimp with Lobster Sauce",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "seafood"
       }
@@ -618,6 +657,7 @@
       "id": "orange-shrimp",
       "displayName": "Orange Shrimp",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "seafood"
       }
@@ -626,6 +666,7 @@
       "id": "thai-curry",
       "displayName": "Thai Curry",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "vegetarian"
       }
@@ -634,6 +675,7 @@
       "id": "ma-po-tofu",
       "displayName": "Ma Po Tofu",
       "commonNames": ["spicy tofu"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "vegetarian"
       }
@@ -642,6 +684,7 @@
       "id": "stir-fried-eggplant",
       "displayName": "Stir Fried Eggplant",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "vegetarian"
       }
@@ -650,6 +693,7 @@
       "id": "pad-thai",
       "displayName": "Pad Thai",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "noodles"
       },
@@ -674,6 +718,7 @@
       "id": "street-noodles",
       "displayName": "Street Noodles",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "noodles"
       }
@@ -682,6 +727,7 @@
       "id": "lo-mein",
       "displayName": "Lo Mein",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "noodles"
       },
@@ -700,6 +746,7 @@
       "id": "strawberry-spring-rolls",
       "displayName": "Strawberry Spring Rolls",
       "commonNames": ["sweet spring rolls", "dessert spring rolls"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "dessert"
       }
@@ -708,6 +755,7 @@
       "id": "chocolate-lava-cake",
       "displayName": "Chocolate Lava Cake",
       "commonNames": ["chocolate cake"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "dessert"
       }
@@ -716,6 +764,7 @@
       "id": "new-york-cheesecake",
       "displayName": "New York Cheesecake",
       "commonNames": ["New york style cheesecake", "cheesecake"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "dessert"
       }
@@ -723,6 +772,7 @@
     {
       "id": "spicy-chicken-bowl",
       "displayName": "Spicy Chicken Bowl",
+      "disambiguationAttributes": [],
       "commonNames": [],
       "classification": {
         "classificationId": "lunch"
@@ -732,6 +782,7 @@
       "id": "korean-bibimbap",
       "displayName": "Korean Bibimbap",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "lunch"
       }
@@ -740,6 +791,7 @@
       "id": "mongolian-beef-bowl",
       "displayName": "Mongolian Beef Bowl",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "lunch"
       }
@@ -748,6 +800,7 @@
       "id": "udon-noodle-bowl",
       "displayName": "Udon Noodle Bowl",
       "commonNames": ["udon bowl"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "lunch"
       }
@@ -756,6 +809,7 @@
       "id": "gochujang-sauce",
       "displayName": "Gochujang Sauce",
       "commonNames": ["spicy sauce"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -764,6 +818,7 @@
       "id": "asian-barbecue-sauce",
       "displayName": "Asian Barbecue Sauce",
       "commonNames": ["barbecue sauce", "bbq sauce", "bbq", "barbecue"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -772,6 +827,7 @@
       "id": "spicy-dipping-sauce",
       "displayName": "Spicy Dipping Sauce",
       "commonNames": ["Spicy Sauce", "Chili Dipping Sauce"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -779,6 +835,7 @@
     {
       "id": "sriracha-honey-dipping-sauce",
       "displayName": "Sriracha Honey Dipping Sauce",
+      "disambiguationAttributes": [],
       "commonNames": ["Sriracha"],
       "classification": {
         "classificationId": "sauce"
@@ -787,6 +844,7 @@
     {
       "id": "chili-sauce",
       "displayName": "Chili Sauce",
+      "disambiguationAttributes": [],
       "commonNames": ["chili"],
       "classification": {
         "classificationId": "sauce"
@@ -795,6 +853,7 @@
     {
       "id": "spicy-plum-sauce",
       "displayName": "spicy plum sauce",
+      "disambiguationAttributes": [],
       "commonNames": ["plum sauce"],
       "classification": {
         "classificationId": "sauce"
@@ -804,6 +863,7 @@
       "id": "sweet-and-sour-sauce",
       "displayName": "Sweet and Sour Sauce",
       "commonNames": ["Sweet sour sauce"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -812,6 +872,7 @@
       "id": "red-chili-sauce",
       "displayName": "Red Chili Sauce",
       "commonNames": ["Fiery Red Chili Sauce", "Fiery Chili Sauce"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -820,6 +881,7 @@
       "id": "umami-sauce",
       "displayName": "Umami Sauce",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -828,6 +890,7 @@
       "id": "mandarin-vinaigrette",
       "displayName": "Mandarin Vinaigrette",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -836,6 +899,7 @@
       "id": "garlic-sauce",
       "displayName": "Garlic Sauce",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -844,6 +908,7 @@
       "id": "sesame-sauce",
       "displayName": "Sesame Sauce",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -852,6 +917,7 @@
       "id": "sichuan-chili-sauce",
       "displayName": "Sichuan Chili Sauce",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -860,6 +926,7 @@
       "id": "lobster-sauce",
       "displayName": "Lobster Sauce",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -868,6 +935,7 @@
       "id": "ginger-soy-sauce",
       "displayName": "Ginger Soy Sauce",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -876,6 +944,7 @@
       "id": "curry-sauce",
       "displayName": "Curry Sauce",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "sauce"
       }
@@ -884,6 +953,7 @@
       "id": "sugar",
       "displayName": "Sugar",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "ingredient"
       }
@@ -892,6 +962,7 @@
       "id": "iced-milk-tea",
       "displayName": "Iced Milk Tea",
       "commonNames": [],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "cold-tea"
       },
@@ -919,6 +990,7 @@
       "id": "boba",
       "displayName": "Boba",
       "commonNames": ["tapioca"],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "ingredient"
       },
@@ -990,6 +1062,7 @@
           }
         }
       ],
+      "disambiguationAttributes": [],
       "classification": {
         "classificationId": "combo"
       },
