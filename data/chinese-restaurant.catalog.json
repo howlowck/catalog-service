@@ -959,10 +959,122 @@
       }
     },
     {
+      "id": "hot-milk-tea",
+      "displayName": "Hot Milk Tea",
+      "commonNames": [],
+      "disambiguationAttributes": [{
+        "conceptId": "tea-temperature",
+        "value": "Hot"
+      }, {
+        "conceptId": "drink-size",
+        "value": "Medium"
+      }],
+      "classification": {
+        "classificationId": "cold-tea"
+      },
+      "components": [{
+        "itemId": "sugar",
+        "type": "concept",
+        "attribute": {
+          "conceptId": "sweet-level",
+          "defaultValue": "Full"
+        }
+      }],
+      "addOns": [
+        {
+          "itemId": "boba",
+          "target": "supplement",
+          "choiceType": "option",
+          "option": {
+            "conceptId": "boba-amount",
+            "defaultValue": "Regular"
+          }
+        }
+      ]
+    },
+    {
+      "id": "small-hot-milk-tea",
+      "displayName": "Small Hot milk tea",
+      "disambiguationAttributes": [
+        {
+          "conceptId": "tea-temperature",
+          "value": "Hot"
+        },
+        {
+          "conceptId": "drink-size",
+          "value": "Small"
+        }
+      ],
+      "classification": {
+        "classificationId": "cold-tea"
+      },
+      "components": [{
+        "itemId": "sugar",
+        "type": "concept",
+        "attribute": {
+          "conceptId": "sweet-level",
+          "defaultValue": "Full"
+        }
+      }],
+      "addOns": [
+        {
+          "itemId": "boba",
+          "target": "supplement",
+          "choiceType": "option",
+          "option": {
+            "conceptId": "boba-amount",
+            "defaultValue": "Regular"
+          }
+        }
+      ]
+    },
+    {
       "id": "iced-milk-tea",
       "displayName": "Iced Milk Tea",
       "commonNames": [],
-      "disambiguationAttributes": [],
+      "disambiguationAttributes": [{
+        "conceptId": "tea-temperature",
+        "value": "Cold"
+      }, {
+        "conceptId": "drink-size",
+        "value": "Medium"
+      }],
+      "classification": {
+        "classificationId": "cold-tea"
+      },
+      "components": [{
+        "itemId": "sugar",
+        "type": "concept",
+        "attribute": {
+          "conceptId": "sweet-level",
+          "defaultValue": "Full"
+        }
+      }],
+      "addOns": [
+        {
+          "itemId": "boba",
+          "target": "supplement",
+          "choiceType": "option",
+          "option": {
+            "conceptId": "boba-amount",
+            "defaultValue": "Regular"
+          }
+        }
+      ]
+    },
+    {
+      "id": "small-iced-milk-tea",
+      "displayName": "Small Iced milk tea",
+      "disambiguationAttributes": [
+        {
+          "conceptId": "tea-temperature",
+          "value": "Cold"
+        },
+        {
+          "conceptId": "drink-size",
+          "value": "Small"
+        }
+      ],
       "classification": {
         "classificationId": "cold-tea"
       },
@@ -995,49 +1107,6 @@
         "classificationId": "ingredient"
       },
       "components": []
-    },
-    {
-      "id": "milk-tea",
-      "displayName": "Iced Milk Tea",
-      "commonNames": [],
-      "disambiguationAttributes": [
-        {
-          "conceptId": "tea-temperature",
-          "value": "Cold"
-        }
-      ],
-      "classification": {
-        "classificationId": "cold-tea"
-      },
-      "components": [{
-        "itemId": "sugar",
-        "type": "concept",
-        "attribute": {
-          "conceptId": "sweet-level",
-          "defaultValue": "Full"
-        }
-      }],
-      "addOns": [
-        {
-          "itemId": "boba",
-          "target": "supplement",
-          "choiceType": "option",
-          "option": {
-            "conceptId": "boba-amount",
-            "defaultValue": "Regular"
-          }
-        }
-      ]
-    },
-    {
-      "id": "hot-milk-tea",
-      "displayName": "Hot milk tea",
-      "disambiguationAttributes": [
-        {
-          "conceptId": "tea-temperature",
-          "value": "Hot"
-        }
-      ]
     },
     {
       "id": "spicy-chicken-combo",

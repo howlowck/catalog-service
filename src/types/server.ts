@@ -23,7 +23,9 @@ export interface LabelResult {
 
 export interface LabelSearchResult {
   label: string,
-  results: LabelResult[]
+  classifications: LabelResult[],
+  items: LabelResult[],
+  concepts: LabelResult[]
 }
 
 export enum SearchResultType {
@@ -42,15 +44,4 @@ export interface SearchResponse {
   // disambiguation: DisambiguationResult[],
   labelSearchResults: LabelSearchResult[],
   // searchResult: SearchResult,
-  itemClassificationHeuristics: {
-    label: string,
-    classifications: {
-      classificationId: string,
-      result: {
-        conceptId: string,
-        key: string,
-        itemsFound: string[]
-      }[]
-    }[]
-  }[]
 }
