@@ -3,9 +3,7 @@ import { classifications, items, conceptValues } from '../core/search'
 import data from '../core/data'
 import { Query, SearchResponse, LabelSearchResult, LabelResult } from '../types/server'
 import { SchemaType } from '../types/generic'
-import graph, { conceptId, classId } from '../core/graph'
-import { FuseResult, ConceptValue } from '../types/search'
-import { intersect } from '../util/array'
+import { FuseResult } from '../types/search'
 import { focusLabelResult, identifyItem, LabelFocusedResult } from '../modules/findItem'
 
 const transformToLabelResult = <T>(type: SchemaType) => (result: FuseResult<T>) => {
@@ -27,41 +25,6 @@ const getLabelResults = (label: string)
     items: itemResults.sort((a, b) => b.score - a.score),
     concepts: conceptValueResults.sort((a, b) => b.score - a.score)
   }
-}
-
-const itemsWithConceptsAndClassification = (itemsWithClassification: string[]) => (conceptValue: ConceptValue) => {
-  const node = graph.getNode(conceptId(conceptValue.conceptId))
-  if (!node) {
-    throw new Error(`there is no concept with id: "${conceptId}"`)
-  }
-
-  // tslint:disable-next-line: strict-type-predicates
-  node.links = node.links === null ? [] : node.links
-  const itemsWithConceptValue: string[] = node.links
-    .filter(_ => _.data.value === conceptValue.key && (_.toId as string).startsWith('item'))
-    .map(_ => (_.toId as string).slice(5))
-
-  const itemsFound = intersect(itemsWithClassification, itemsWithConceptValue)
-  return {
-    conceptId: conceptValue.conceptId,
-    key: conceptValue.key,
-    itemsFound
-  }
-}
-
-export const findItemsWithClassification = (classification: string, conceptValues: ConceptValue[]) => {
-  const classificationNode = graph.getNode(classId(classification))
-  if (!classificationNode) {
-    return []
-  }
-
-  const itemsWithClassification: string[] = classificationNode.links
-    .filter((_) => (_.fromId as string).startsWith('item') && (_.toId as string).startsWith('classification')) // only item->classification relationships
-    .map(_ => (_.fromId as string).slice(5)) // ['pork-egg-rolls', 'chicken-egg-rolls']
-
-  const conceptValuesWithItems = conceptValues.map(itemsWithConceptsAndClassification(itemsWithClassification)).filter(_ => _.itemsFound.length > 0)
-
-  return conceptValuesWithItems
 }
 
 export default (req: Request, res: Response) => {
@@ -87,8 +50,5 @@ export default (req: Request, res: Response) => {
     itemIdentified,
     labelSearchResults,
     focusedLabelResults
-    // disambiguation: [],
-    // searchResult: getSearchResult(data, labels),
-    // itemClassificationHeuristics: itemsFoundPerClassification
   } as SearchResponse)
 }

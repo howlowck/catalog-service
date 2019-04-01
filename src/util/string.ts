@@ -1,4 +1,5 @@
 import { ConceptValue } from '../types/search'
+import { SchemaType } from '../types/generic'
 
 export const convertSearchPairingToConceptValue = (name: string): ConceptValue => {
   const pairing: string[] = name.split(':')
@@ -12,3 +13,11 @@ export const convertSearchPairingToConceptValue = (name: string): ConceptValue =
     key: pairing[1]
   }
 }
+
+export const graphId = (type: string, id: string) => {
+  return type + ':' + id
+}
+
+export const classId: (id: string) => string = graphId.bind(null, SchemaType.classification)
+export const conceptId: (id: string) => string = graphId.bind(null, SchemaType.concept)
+export const itemId: (id: string) => string = graphId.bind(null, SchemaType.item)

@@ -970,7 +970,7 @@
         "value": "Medium"
       }],
       "classification": {
-        "classificationId": "cold-tea"
+        "classificationId": "hot-tea"
       },
       "components": [{
         "itemId": "sugar",
@@ -1006,7 +1006,7 @@
         }
       ],
       "classification": {
-        "classificationId": "cold-tea"
+        "classificationId": "hot-tea"
       },
       "components": [{
         "itemId": "sugar",
