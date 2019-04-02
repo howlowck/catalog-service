@@ -69,7 +69,7 @@ export const itemSearch = new Fuse(data.items, {
   findAllMatches: true,
   keys: [
     { name: 'displayName', weight: 1 },
-    { name: 'commonNames', weight: 0.7 }
+    { name: 'commonNames', weight: 1 }
   ]
 })
 

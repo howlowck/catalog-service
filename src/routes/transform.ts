@@ -40,7 +40,6 @@ export default (req: Request, res: Response) => {
       })
 
     const candidateItems = flatSingle(candidateItemsPerConcept)
-
     const newItem = findMostSimilarItem(data, referenceItem, candidateItems)
     if (!newItem) {
       return prev

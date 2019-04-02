@@ -2,6 +2,7 @@ import { ConceptValue } from '../types/search'
 import { CatalogSchema, ItemDefinition, Concept } from 'common-catalog-schema'
 import { LabelResult, LabelSearchResult } from '../types/server'
 import { convertSearchPairingToConceptValue } from '../util/string'
+import { intersect } from '../util/array'
 
 export interface ConceptAssociation {
   conceptId: string,
@@ -178,6 +179,22 @@ export const identifyItem = (data: CatalogSchema, labelSearchResults: LabelSearc
 
   if (associationLength === 1) {
     return data.items.find(_ => _.id === lastIdentified.associations[associationLength - 1].itemId) || null
+  }
+
+  if (associationLength > 1) {
+    // needs to do some filtering on the remaining to see if there would be any left
+    // loop over the remainer item associations and see if the remaining concepts are in associations
+    const remainingAttributes = longestResult.result.remaining.map(_ => _.conceptId)
+    const itemsWithoutRemainingAttributes = lastIdentified.associations.filter(association => {
+      const item = data.items.find(_ => _.id === association.itemId) as ItemDefinition
+      const attributeIdsInItem = item.disambiguationAttributes.map(_ => _.conceptId)
+      // if there are no overlap, return true
+      const intersectAttributes = intersect(attributeIdsInItem, remainingAttributes)
+      return intersectAttributes.length === 0
+    })
+    if (itemsWithoutRemainingAttributes.length === 1) {
+      return data.items.find(_ => _.id === itemsWithoutRemainingAttributes[0].itemId) || null
+    }
   }
 
   return null

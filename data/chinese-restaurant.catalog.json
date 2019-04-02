@@ -1029,6 +1029,42 @@
       ]
     },
     {
+      "id": "large-hot-milk-tea",
+      "displayName": "Large Hot milk tea",
+      "disambiguationAttributes": [
+        {
+          "conceptId": "tea-temperature",
+          "value": "Hot"
+        },
+        {
+          "conceptId": "drink-size",
+          "value": "Large"
+        }
+      ],
+      "classification": {
+        "classificationId": "hot-tea"
+      },
+      "components": [{
+        "itemId": "sugar",
+        "type": "concept",
+        "attribute": {
+          "conceptId": "sweet-level",
+          "defaultValue": "Full"
+        }
+      }],
+      "addOns": [
+        {
+          "itemId": "boba",
+          "target": "supplement",
+          "choiceType": "option",
+          "option": {
+            "conceptId": "boba-amount",
+            "defaultValue": "Regular"
+          }
+        }
+      ]
+    },
+    {
       "id": "iced-milk-tea",
       "displayName": "Iced Milk Tea",
       "commonNames": [],
@@ -1073,6 +1109,42 @@
         {
           "conceptId": "drink-size",
           "value": "Small"
+        }
+      ],
+      "classification": {
+        "classificationId": "cold-tea"
+      },
+      "components": [{
+        "itemId": "sugar",
+        "type": "concept",
+        "attribute": {
+          "conceptId": "sweet-level",
+          "defaultValue": "Full"
+        }
+      }],
+      "addOns": [
+        {
+          "itemId": "boba",
+          "target": "supplement",
+          "choiceType": "option",
+          "option": {
+            "conceptId": "boba-amount",
+            "defaultValue": "Regular"
+          }
+        }
+      ]
+    },
+    {
+      "id": "large-iced-milk-tea",
+      "displayName": "Large Iced milk tea",
+      "disambiguationAttributes": [
+        {
+          "conceptId": "tea-temperature",
+          "value": "Cold"
+        },
+        {
+          "conceptId": "drink-size",
+          "value": "Large"
         }
       ],
       "classification": {

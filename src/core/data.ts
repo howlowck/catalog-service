@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { CatalogSchema } from 'common-catalog-schema'
 
-const content = fs.readFileSync('data/chinese-restaurant.catalog.json', 'utf8')
+const content = fs.readFileSync('data/coffee-shop.catalog.json', 'utf8')
 
 const rawData: CatalogSchema = JSON.parse(content)
 
