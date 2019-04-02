@@ -54,7 +54,7 @@
   "items": [{
     "id": "hot-brewed-coffee",
     "displayName": "Medium Hot Brewed Coffee",
-    "commonNames": ["coffee", "brewed coffee"],
+    "commonNames": [],
     "disambiguationAttributes": [{
       "conceptId": "drink-temperature",
       "value": "hot"
@@ -140,6 +140,9 @@
     "displayName": "Small Latte",
     "commonNames": [],
     "disambiguationAttributes": [{
+      "conceptId": "drink-temperature",
+      "value": "hot"
+    }, {
       "conceptId": "drink-size",
       "value": "small"
     }],
@@ -207,6 +210,40 @@
     }, {
       "conceptId": "drink-size",
       "value": "small"
+    }, {
+      "conceptId": "latte-flavor",
+      "value": "cinnamon"
+    }],
+    "classification": {
+      "classificationId": "latte"
+    }
+  }, {
+    "id": "small-iced-cinnamon-latte",
+    "displayName": "Small Iced cinnamon Latte",
+    "commonNames": [],
+    "disambiguationAttributes": [{
+      "conceptId": "drink-temperature",
+      "value": "cold"
+    }, {
+      "conceptId": "drink-size",
+      "value": "small"
+    }, {
+      "conceptId": "latte-flavor",
+      "value": "cinnamon"
+    }],
+    "classification": {
+      "classificationId": "latte"
+    }
+  }, {
+    "id": "medium-iced-cinnamon-latte",
+    "displayName": "Regular Iced cinnamon Latte",
+    "commonNames": [],
+    "disambiguationAttributes": [{
+      "conceptId": "drink-temperature",
+      "value": "cold"
+    }, {
+      "conceptId": "drink-size",
+      "value": "medium"
     }, {
       "conceptId": "latte-flavor",
       "value": "cinnamon"
