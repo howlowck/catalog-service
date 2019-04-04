@@ -32,7 +32,7 @@ export const getCandidateItemsFromLabelSearchResult = (data: CatalogSchema, labe
   }
 
   const classificationIds = labelResult.classifications.map(_ => _.value)
-  return data.items.filter(_ => classificationIds.includes(_.classification.classificationId))
+  return data.items.filter(_ => classificationIds.some(classId => _.classifications.map(c => c.classificationId).includes(classId)))
 }
 
 /**

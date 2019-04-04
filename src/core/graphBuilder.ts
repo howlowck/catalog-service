@@ -31,10 +31,9 @@ const graphBuilder = (options: Option = { includeConcepts: false }) => (data: Ca
     g.addNode(itemId(id), {
       displayName
     })
-
-    if (item.classification && item.classification.classificationId) {
-      g.addLink(itemId(id), classId(item.classification.classificationId))
-    }
+    item.classifications.forEach(classification => {
+      g.addLink(itemId(id), classId(classification.classificationId))
+    })
   })
 
   if (options.includeConcepts) {

@@ -2,7 +2,6 @@ import Fuse from 'fuse.js'
 import data from './data'
 import { flatSingle } from '../util/array'
 import { FuseResult, MakeSearchOutput, ConceptValueItem } from '../types/search'
-import { Classification, Concept, ItemDefinition } from 'common-catalog-schema'
 
 const conceptArray = data.concepts.map((concept) => {
   const names = !concept.values ? [] : concept.values.reduce((prev: string[], current) => {

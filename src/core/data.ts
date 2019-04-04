@@ -1,31 +1,4 @@
-import fs from 'fs'
+import dataParser from './dataParser'
 import { CatalogSchema } from 'common-catalog-schema'
 
-const content = fs.readFileSync('data/coffee-shop.catalog.json', 'utf8')
-
-const rawData: CatalogSchema = JSON.parse(content)
-
-const data = {
-  ...rawData,
-  items: rawData.items.map(item => {
-    return {
-      ...item,
-      // tslint:disable-next-line: no-unnecessary-type-assertion
-      disambiguationAttributes: item.disambiguationAttributes!.map(attr => ({
-        ...attr,
-        value: attr.value.toString().toLowerCase()
-      }))
-    }
-  }),
-  concepts: rawData.concepts.map(concept => {
-    return {
-      ...concept,
-      values: concept.values!.map(value => ({
-        ...value,
-        value: value.value.toLowerCase()
-      }))
-    }
-  })
-}
-
-export default data
+export default dataParser('data/coffee-shop.catalog.json') as CatalogSchema
