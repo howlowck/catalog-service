@@ -1,6 +1,7 @@
 {
   "title": "Coffee Shop",
-  "classifications": [{
+  "classifications": [
+    {
     "id": "drink",
     "name": "Drink"
   }, {
@@ -57,10 +58,12 @@
     "commonNames": [],
     "disambiguationAttributes": [{
       "conceptId": "drink-temperature",
-      "value": "hot"
+      "value": "hot",
+      "isDefault": true
     }, {
       "conceptId": "drink-size",
-      "value": "medium"
+      "value": "medium",
+      "isDefault": true
     }],
     "classifications": [{
       "classificationId": "hot-coffee"

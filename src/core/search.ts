@@ -1,9 +1,9 @@
 import Fuse from 'fuse.js'
-import data from './data'
+import { CatalogSchema } from 'common-catalog-schema'
 import { flatSingle } from '../util/array'
 import { FuseResult, MakeSearchOutput, ConceptValueItem } from '../types/search'
 
-const conceptArray = data.concepts.map((concept) => {
+const conceptArray = (data: CatalogSchema) => data.concepts.map((concept) => {
   const names = !concept.values ? [] : concept.values.reduce((prev: string[], current) => {
     const synonyms = current.synonyms || []
     return [...prev, current.value, ...synonyms]
@@ -16,7 +16,7 @@ const conceptArray = data.concepts.map((concept) => {
   }
 })
 
-const conceptValueArray: ConceptValueItem[] = flatSingle(data.concepts.map((concept) => {
+const conceptValueArray: (data: CatalogSchema) => ConceptValueItem[] = (data) => flatSingle(data.concepts.map((concept) => {
   const { values, id } = concept
   if (!values) {
     return []
@@ -31,7 +31,7 @@ const conceptValueArray: ConceptValueItem[] = flatSingle(data.concepts.map((conc
   })
 }))
 
-export const classificationSearch = new Fuse(data.classifications, {
+export const classificationSearch = (data: CatalogSchema) => new Fuse(data.classifications, {
   id: 'id',
   threshold: 0.3,
   distance: 0,
@@ -45,7 +45,7 @@ export const classificationSearch = new Fuse(data.classifications, {
   ]
 })
 
-export const conceptSearch = new Fuse(conceptArray, {
+export const conceptSearch = (data: CatalogSchema) => new Fuse(conceptArray(data), {
   id: 'id',
   threshold: 0.3,
   distance: 0,
@@ -58,7 +58,7 @@ export const conceptSearch = new Fuse(conceptArray, {
   ]
 })
 
-export const itemSearch = new Fuse(data.items, {
+export const itemSearch = (data: CatalogSchema) => new Fuse(data.items, {
   id: 'id',
   threshold: 0.4,
   // distance: 3,
@@ -72,7 +72,7 @@ export const itemSearch = new Fuse(data.items, {
   ]
 })
 
-export const conceptValueSearch = new Fuse(conceptValueArray, {
+export const conceptValueSearch = (data: CatalogSchema) => new Fuse(conceptValueArray(data), {
   id: 'id',
   threshold: 0.3,
   distance: 0,
@@ -98,7 +98,7 @@ const makeSearch = <T>(searchIndex: Fuse<any>): MakeSearchOutput<T> => {
   }
 }
 
-export const classifications = makeSearch<string>(classificationSearch)
-export const concepts = makeSearch<string>(conceptSearch)
-export const items = makeSearch<string>(itemSearch)
-export const conceptValues = makeSearch<string>(conceptValueSearch)
+export const makeClassificationSearch = (data: CatalogSchema) => makeSearch<string>(classificationSearch(data))
+export const makeConceptSearch = (data: CatalogSchema) => makeSearch<string>(conceptSearch(data))
+export const makeItemSearch = (data: CatalogSchema) => makeSearch<string>(itemSearch(data))
+export const makeConceptValueSearch = (data: CatalogSchema) => makeSearch<string>(conceptValueSearch(data))

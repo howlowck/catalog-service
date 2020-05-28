@@ -1,8 +1,7 @@
 import { Request, Response } from 'express'
-import { classifications, items, conceptValues } from '../core/search'
-import data from '../core/data'
+import store from '../core/data'
 import { Query, SearchResponse, LabelSearchResult, LabelResult } from '../types/server'
-import { SchemaType } from '../types/generic'
+import { SchemaType, DataStore } from '../types/generic'
 import { FuseResult } from '../types/search'
 import { focusLabelResult, identifyItem, LabelFocusedResult } from '../modules/findItem'
 
@@ -15,11 +14,11 @@ const transformToLabelResult = <T>(type: SchemaType) => (result: FuseResult<T>) 
   }
 }
 
-const getLabelResults = (label: string)
+const getLabelResults = (store: DataStore, realm: string, label: string)
   : {classifications: LabelResult[], items: LabelResult[], concepts: LabelResult[]} => {
-  const classificationResults = classifications.search(label).map(transformToLabelResult(SchemaType.classification))
-  const itemResults = items.search(label).map(transformToLabelResult(SchemaType.item))
-  const conceptValueResults = conceptValues.search(label).map(transformToLabelResult(SchemaType.concept))
+  const classificationResults = store[realm].classificationSearch.search(label).map(transformToLabelResult(SchemaType.classification))
+  const itemResults = store[realm].itemSearch.search(label).map(transformToLabelResult(SchemaType.item))
+  const conceptValueResults = store[realm].conceptValueSearch.search(label).map(transformToLabelResult(SchemaType.concept))
   return {
     classifications: classificationResults.sort((a, b) => b.score - a.score),
     items: itemResults.sort((a, b) => b.score - a.score),
@@ -28,11 +27,13 @@ const getLabelResults = (label: string)
 }
 
 export default (req: Request, res: Response) => {
-  const { labels: rawLabels } = req.query as Query
+  const { labels: rawLabels, realm = 'coffee-shop' } = req.query as Query
+  const realmData = store[realm]
+  const data = realmData.data
 
   const labels: string[] = rawLabels.toLowerCase().split(',').map(_ => _.trim())
   const labelSearchResults: LabelSearchResult[] = labels.map(label => {
-    const results = getLabelResults(label)
+    const results = getLabelResults(store, realm, label)
     return { label, ...results }
   })
 
